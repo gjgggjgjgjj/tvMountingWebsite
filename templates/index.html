@@ -4,25 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>yourname.</title>
+    <title>Southern Utah TV Mounting | Expert TV Mounting Solutions - Book Now</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
     <link href="https://fonts.googleapis.com/css?family=Comfortaa:700" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
+      <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
     <div id="loading">
         <div id="spinner"></div>
     </div>
     <div id="header" class="animated slideInDown" style="animation-delay:1.8s;">
-      <img id="title" src="assets/TvMountingLogoBest.png">
-      <br>
+      <img id="title" src="static/assets/TvMountingLogoBest.png">
+      <br> <h1 id="title" >Southern Utah TV Mounting</h1>
       <div id="links">
                               <!-- this was skill work and contact ori -->
             <a class="btn_one" href="#skills">Services</a>
-            <a class="btn_one" href="#work" style="margin:0px 60px;">Get A Quote</a>
-            <a class="btn_one" href="#contact">Contact</a>
+            <a class="btn_one" style="margin:0px 60px;">Get A Quote</a>
+            <a class="btn_one" href="tel:+19285335549">(928)533-5549</a>
       </div>
     </div>
 
@@ -37,32 +37,64 @@
 
     <div id="portfolio">
              <div id="skills">
-                 <h1>skills.</h1>   
-                 <div>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. In bibendum tincidunt nulla, id semper mi cursus ac. Fusce turpis urna, condimentum sit amet dolor at, vulputate ultrices massa. Vestibulum non euismod nulla, eu pretium risus. Curabitur porta molestie vulputate. Sed tortor enim, rhoncus vel mauris vitae, elementum condimentum augue. Donec fermentum lobortis lectus, in feugiat turpis faucibus et. Pellentesque luctus metus vitae augue lobortis sagittis vitae sit amet enim. Morbi egestas velit ac arcu fermentum lacinia. Nullam eget hendrerit neque. Cras et laoreet ante. Vivamus condimentum euismod commodo. Nulla pulvinar, turpis vitae condimentum tempor, ex ex eleifend quam, et maximus sapien mi sed est. Donec elit mi, dictum nec magna quis, mollis sollicitudin ligula. Maecenas ullamcorper ante vel ullamcorper mollis. Interdum et malesuada fames ac ante ipsum primis in faucibus.
-                        </p>
-                 </div> 
+                  
+                  <div class="two-column">
+                        <div class="text-side">
+                              <h1>Professional TV Installs Done Right — The First Time</h1>
+                              <p>
+                                    Clean, secure and level TV installs for homes and businesses across Southern Utah.
+                                    No visible wires. No mess. No stress.
+                              </p>
+                        </div>
+                        <div class="image-side">
+                              <img src="{{ url_for('static', filename='assets/churchTVInstall.webp') }}" alt="Professional Tv Mounting Example">
+                        </div>
+
+                  </div>
              </div>
          
-              <div id="work">
-                 <h1>works.</h1>
+            <div id="work">
+                  <div class="two-column">
+                        <div class="image-side">
+                              <img src="{{ url_for('static', filename='assets/TVFireplace.webp') }}" alt="Professional Tv Mounting Example">
+                        </div>
 
-                 <div class="project">
-                 <h2>project title 1</h2>
-                 <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In bibendum tincidunt nulla, id semper mi cursus ac. Fusce turpis urna, condimentum sit amet dolor at, vulputate ultrices massa. Vestibulum non euismod nulla, eu pretium risus. Curabitur porta molestie vulputate.</div>
-                 <button class="btn_one">visit project</button>
-                </div>
-
-                <div class="project">
-                 <h2>project title 2</h2>
-                 <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In bibendum tincidunt nulla, id semper mi cursus ac. Fusce turpis urna, condimentum sit amet dolor at, vulputate ultrices massa. Vestibulum non euismod nulla, eu pretium risus. Curabitur porta molestie vulputate.Lorem ipsum dolor sit amet, consectetur adipiscing elit. In bibendum tincidunt nulla, id semper mi cursus ac. Fusce turpis urna, condimentum sit amet dolor at, vulputate ultrices massa. Vestibulum non euismod nulla, eu pretium risus. Curabitur porta molestie vulputate.
-                 </div>
-                 <button class="btn_one">visit project</button>
-                 <button class="btn_two">code</button>
-                </div>
-
+                        <div class="text-side">
+                              <h1>What We Do</h1>
+                              <p>
+                                    We specialize in professional wall-mounted TV solutions designed to make your space look better and function better.
+                                    <br>
+                                    <ul>
+                                          <li>TV Wall Mounting</li>
+                                          <li>Soundbar Installation</li>
+                                          <li>Wire Concealment (in-Wall or Raceway)</li>
+                                          <li>TV Dismount & Remount</li>
+                                          <li>Fireplace TV Mounting</li>
+                                    </ul>
+                              </p>
+                        </div>
+                  </div>
              </div>
+
+            <div>
+                  <div class="image-side">
+                        <img src="{{ url_for('static', filename='assets/') }}">
+                  </div>
+
+                  <div class="text-side">
+                        <h1>WHY CHOOSE US?</h1>
+                              <p>Precision Installs</p>
+                              <p>Every TV is mounted into studs, level and safety-checked.</p>
+                              <p>Clean & Respectful</p>
+                              <p>We protect your home and leave the area spotless.</p>
+                              <p>Honest Pricing</p>
+                              <p>No surprise fees. You know the price before we start.</p>
+                              <p>Local Southern Utah Business</p>
+                  </div>
+            </div>
+ 
+    </div>
+
          
               <div id="contact">
                  <h1>contact.</h1> 
@@ -73,7 +105,7 @@
                      <button class="btn_one">send</button>
                  </form> 
                  <div id="details">
-                    <a class="btn_social"><i class="fas fa-phone"></i></a>
+                    <a class="btn_social" href="tel:+19285335549">(928)533-5549<i class="fas fa-phone"></i></a>
                     <a class="btn_social"><i class="fas fa-at"></i></a>
                     <a class="btn_social"><i class="fab fa-twitter"></i></a>
                     <a class="btn_social"><i class="fab fa-dribbble"></i></a>
@@ -81,9 +113,9 @@
              </div>
     </div>
     <div id="footer">
-        made on earth by a human <br><br> <a href="https://imfunniee.github.io">imfunniee</a>
+        <br><br> <a href="">Southern Utah TV Mounting</a>
     </div>
-<script src="js/script.js" type="text/javascript"></script>
+            <script src="{{ url_for('static', filename='script.js') }}" type="text/javascript"></script>
 </body>
 </html>
 
