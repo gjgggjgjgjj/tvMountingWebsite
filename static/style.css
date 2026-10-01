@@ -123,7 +123,7 @@ body,html {
 .section-divider {
   border: 0;
   height: 1px;
-  background-color: #333333; /* Matches your current card border color */
+  background-color: #343434; /* Matches your current card border color */
   margin: 3rem auto;         /* Creates top/bottom spacing around the line */
   width: 90%;                /* Prevents it from touching the absolute screen edges */
   max-width: 1200px;         /* Keeps it aligned with your main content width */
@@ -150,6 +150,14 @@ body,html {
 }
 
 /* this is for li elements to be bigger */
+
+.service_quote {
+      display: flex;
+      justify-content: center; /* Centers horizontally */
+      align-items: center;    /* Centers vertically if needed */
+      width: 100%;
+}
+
 li {
       font-size: 30px;
 }

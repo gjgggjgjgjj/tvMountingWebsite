@@ -22,7 +22,7 @@
       <br> <h1 id="title" >Southern Utah TV Mounting</h1>
       <div id="links">
                               <!-- this was skill work and contact ori -->
-            <a class="btn_one" href="{{ url_for('home') }}#services">Services</a>
+            <a class="btn_one" href="/#services">Services</a>
             <a class="btn_one" href="/contact" style="margin:0px 60px;">Get A Quote</a>
             <a class="btn_one" href="tel:+19285335549">(928)533-5549</a>
       </div>
@@ -31,6 +31,55 @@
       
             <!-- page content -->
             {% block content %} {% endblock %}
+
+
+      <hr class="section-divider">
+
+      <!-- here is the services tab / section of everything -->
+      <section id="services" class="services-section">
+            <div class="container">
+                  <h2>Our Services</h2>
+                  <p class="subtitle">Professional TV mounting & audio solutions tailored for your space.</p>
+
+                  <div class="services-grid">
+                        <!-- Card 1 -->
+                        <div class="service-card">
+                        <div class="icon">📺</div>
+                        <h3>Standard TV Wall Mounting</h3>
+                        <p>Securely mounted into wood or metal studs. Includes leveling, hardware setup, and safety inspection.</p>
+                        <span class="price-tag">Starting at $150</span>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div class="service-card">
+                        <div class="icon">🔌</div>
+                        <h3>Wire Concealment</h3>
+                        <p>In-wall cable routing for a completely invisible look, or sleek surface-mounted raceways.</p>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="service-card">
+                        <div class="icon">🔥</div>
+                        <h3>Fireplace TV Mounting</h3>
+                        <p>Specialized installations on stone, brick, tile, or mortar using masonry-grade anchors.</p>
+                        </div>
+
+                        <!-- Card 4 -->
+                        <div class="service-card">
+                        <div class="icon">🔊</div>
+                        <h3>Soundbar & Audio Setup</h3>
+                        <p>Flush soundbar mounting directly below your TV with hidden wiring for Apple TV, Roku, & consoles.</p>
+                        </div>
+
+                        <!-- Card 5 -->
+                        <div class="service-card">
+                        <div class="icon">🔄</div>
+                        <h3>Dismount & Remount</h3>
+                        <p>Moving or upgrading? We safely remove your current setup and re-install in your new space.</p>
+                        </div>
+                  </div>
+            </div>
+      </section>
 
             <!-- faqs -->
             <div id="faq-section">
@@ -76,6 +125,9 @@
             </div>   
             </div>
       </div>
+
+
+
     <div id="footer">
         <br><br> <a href="">Southern Utah TV Mounting</a>
     </div>
