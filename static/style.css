@@ -1,3 +1,11 @@
+#header_padding{
+      padding-top: 450px;
+}
+#install_price{
+      font-size: 15px;
+}
+
+
 body,html {
     padding:0px;
     margin:0px;
@@ -5,7 +13,7 @@ body,html {
     font-weight:bold;
     color:#fff;
     background:rgb(0, 0, 0);
-    scroll-behavior: smooth;
+    /* scroll-behavior: smooth; */
 }
 #loading {
     width: 100vw;
@@ -42,8 +50,8 @@ body,html {
 #header div {
     display:block;
 }
-/* .mainTitle{ */
-/* } */
+/* here is the services dropdown button */
+/*  */
 
 #title {
     font-size:50px;
@@ -76,7 +84,7 @@ body,html {
 }
 #middle {
     width:100%;
-    height:90vh;
+    height:100vh;
     background:linear-gradient(0deg,rgba(0,0,0,1),rgba(0,0,0,0)), url("assets/artBackgroundGood.jpg") center center fixed;
     background-size:100% auto;
     background-repeat:no-repeat;
@@ -90,6 +98,35 @@ body,html {
 #tagline {
     font-size:50px;
     width:60%;
+}
+/* ----------------------------------------------------------services css below */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.service-card {
+  background-color: #1a1a1a; /* Dark background matching your theme */
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 1.5rem;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.service-card:hover {
+  border-color: #e50914; /* Your red accent color */
+  transform: translateY(-3px);
+}
+/* ------------------------------------------------ */
+.section-divider {
+  border: 0;
+  height: 1px;
+  background-color: #333333; /* Matches your current card border color */
+  margin: 3rem auto;         /* Creates top/bottom spacing around the line */
+  width: 90%;                /* Prevents it from touching the absolute screen edges */
+  max-width: 1200px;         /* Keeps it aligned with your main content width */
 }
 .two-column {
       display: flex;
@@ -285,6 +322,64 @@ li {
         padding:10px 11px;
     }
 }
+
+
+/* FAQ Section */
+#faq-section {
+  max-width: 800px;
+  margin: 60px auto;
+  padding: 0 20px;
+  color: #ffffff;
+}
+
+#faq-section h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #ffffff;
+}
+
+.faq-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.faq-item {
+  background-color: #1e1e1e;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 15px 20px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.faq-item:hover {
+  background-color: #262626;
+}
+
+.faq-item summary {
+  font-weight: bold;
+  font-size: 1.05rem;
+  color: #ffffff;
+  outline: none;
+  list-style-type: '➕ ';
+}
+
+.faq-item[open] summary {
+  list-style-type: '➖ ';
+  margin-bottom: 10px;
+  color: #007bff;
+}
+
+.faq-item p {
+  color: #cccccc;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin: 0;
+  padding-left: 5px;
+}
+
 #footer {
     width:100%;
     padding:10vh 0px;
@@ -336,4 +431,126 @@ button:focus {
 50% {background-position: 100% 50%}
 100% {background-position: 0% 50%}
 }
+
+
+/* here is quote.html ----------------------------------------------------------- */
+/* Quote Page Styling */
+/* Offsets content below fixed header */
+#content-container {
+  padding-top: 160px; /* Adjust this value up or down depending on your header's total height */
+  height: 90vh;
+
+}
+
+#quote-container {
+  max-width: 800px;
+  margin: 0 auto 40px auto;
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.quote-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.quote-header h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #1a1a1a;
+}
+
+.quote-header p {
+  color: #666;
+  font-size: 1rem;
+}
+
+.quote-form .form-group {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.quote-form .form-group-row {
+  display: flex;
+  gap: 20px;
+}
+
+.quote-form .form-group-row .form-group {
+  flex: 1;
+}
+
+.quote-form label {
+  font-weight: bold;
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.quote-form input[type="text"],
+.quote-form input[type="tel"],
+.quote-form input[type="email"],
+.quote-form select,
+.quote-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+.quote-form input:focus,
+.quote-form select:focus,
+.quote-form textarea:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+/* Checkbox Grid */
+.checkbox-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 12px;
+  margin-top: 5px;
+}
+
+.checkbox-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: normal;
+  cursor: pointer;
+  background: #f8f9fa;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #e9ecef;
+}
+
+.checkbox-item input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.submit-quote-btn {
+  width: 100%;
+  padding: 14px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+  .quote-form .form-group-row {
+    flex-direction: column;
+    gap: 0;
+  }
+}
+
+/* ------------------------------------------------------------------------------------------------ */
 

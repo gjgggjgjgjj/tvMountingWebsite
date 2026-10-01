@@ -1,0 +1,94 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div id="content-container" >
+    <div id="quote-container" class="animated fadeIn">
+        <div class="quote-header">
+            <h1>Get a Fast, Free Quote</h1>
+            <p>Tell us about your project and we’ll get back to you within 24 hours with an exact price.</p>
+        </div>
+
+        <form action="/quote" method="POST" class="quote-form">
+            <!-- Contact Information -->
+            <div class="form-group-row">
+                <div class="form-group">
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" name="name" placeholder="John Doe" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number *</label>
+                    <input type="tel" id="phone" name="phone" placeholder="(435) 555-0199" required>
+                </div>
+            </div>
+
+            <div class="form-group-row">
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="city">City / Location *</label>
+                    <input type="text" id="city" name="city" placeholder="e.g. St. George, Washington, Hurricane" required>
+                </div>
+            </div>
+
+            <!-- Job Specifics -->
+            <div class="form-group-row">
+                <div class="form-group">
+                    <label for="tv_size">TV Size (Inches)</label>
+                    <select id="tv_size" name="tv_size">
+                        <option value="" disabled selected>Select TV Size</option>
+                        <option value="under-43">43" or smaller</option>
+                        <option value="44-65">44" - 65"</option>
+                        <option value="66-75">66" - 75"</option>
+                        <option value="76-plus">76" or larger</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="wall_type">Wall Type</label>
+                    <select id="wall_type" name="wall_type">
+                        <option value="" disabled selected>Select Wall Material</option>
+                        <option value="drywall">Drywall / Wood Studs</option>
+                        <option value="fireplace-brick">Fireplace (Brick / Stone)</option>
+                        <option value="tile">Tile / Marble</option>
+                        <option value="concrete">Concrete / Plaster</option>
+                        <option value="unsure">Not Sure</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Add-on Services Checkboxes -->
+            <div class="form-group">
+                <label>Additional Services Needed:</label>
+                <div class="checkbox-grid">
+                    <label class="checkbox-item">
+                        <input type="checkbox" name="services" value="wire-concealment">
+                        In-Wall Wire Concealment
+                    </label>
+                    <label class="checkbox-item">
+                        <input type="checkbox" name="services" value="mount-provided">
+                        Provide TV Mount (Tilt / Full-Motion)
+                    </label>
+                    <label class="checkbox-item">
+                        <input type="checkbox" name="services" value="soundbar">
+                        Soundbar Installation
+                    </label>
+                    <label class="checkbox-item">
+                        <input type="checkbox" name="services" value="dismount">
+                        Dismount Existing TV
+                    </label>
+                </div>
+            </div>
+
+            <!-- Additional Notes -->
+            <div class="form-group">
+                <label for="details">Project Details / Questions</label>
+                <textarea id="details" name="details" rows="4" placeholder="Mention any specific preferences, fireplace height, outlet locations, or preferred installation dates..."></textarea>
+            </div>
+
+            <button type="submit" class="btn_one submit-quote-btn">Submit Quote Request</button>
+        </form>
+    </div>
+</div>
+{% endblock %}
+

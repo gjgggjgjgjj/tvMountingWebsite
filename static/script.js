@@ -32,3 +32,15 @@ setTimeout(function(){
     },800);
 },1450);
 
+// help services button work
+window.addEventListener('DOMContentLoaded', () => {
+    if (window.location.hash === '#services') {
+      const servicesSection = document.getElementById('services');
+      if (servicesSection) {
+        // Small delay ensures the page layout is fully rendered before scrolling
+        setTimeout(() => {
+          servicesSection.scrollIntoView({ behavior: 'smooth' });
+        }, 100);
+      }
+    }
+  });

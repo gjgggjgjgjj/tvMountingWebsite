@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Southern Utah TV Mounting | Expert TV Mounting Solutions - Book Now</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa:700" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+      <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div id="loading">
+        <div id="spinner"></div>
+    </div>
+    <div id="header" class="animated slideInDown" style="animation-delay:1.8s;">
+      <a href="/">
+            <img id="title" src="{{ url_for('static', filename='assets/TvMountingLogoBest.png') }}"> 
+      </a>
+      <br> <h1 id="title" >Southern Utah TV Mounting</h1>
+      <div id="links">
+                              <!-- this was skill work and contact ori -->
+            <a class="btn_one" href="{{ url_for('home') }}#services">Services</a>
+            <a class="btn_one" href="/contact" style="margin:0px 60px;">Get A Quote</a>
+            <a class="btn_one" href="tel:+19285335549">(928)533-5549</a>
+      </div>
+    </div>
+
+      
+            <!-- page content -->
+            {% block content %} {% endblock %}
+
+            <!-- faqs -->
+            <div id="faq-section">
+                  <h1>Frequently Asked Questions</h1>
+                  <div class="faq-container">
+                        <details class="faq-item">
+                              <summary>Can you mount a TV on a stone or brick fireplace without damaging the masonry?</summary>
+                              <p>Yes. We use specialized masonry anchors and diamond-tipped carbide bits to secure the mount directly into mortar joints or brick without cracking or damaging your fireplace structure.</p>
+                        </details>
+
+                        <details class="faq-item">
+                              <summary>How do you hide wires if my wall isn’t pre-wired?</summary>
+                              <p>We offer two solutions: in-wall cable routing (running wires inside the drywall for a completely invisible look) or sleek, paintable surface raceways/covers to keep cables organized and hidden.</p>
+                        </details>
+
+                        <details class="faq-item">
+                              <summary>Which areas of Southern Utah do you service?</summary>
+                              <p>We service St. George, Washington, Ivins, Santa Clara, Hurricane, La Verkin, and surrounding Southern Utah communities.</p>
+                        </details>
+
+                        <details class="faq-item">
+                              <summary>Can you mount 85"+ TVs or mount onto metal studs?</summary>
+                              <p>Absolutely. We handle large-format displays (up to 98"+) and carry specialized heavy-duty toggles designed specifically for metal stud commercial or condo installations.</p>
+                        </details>
+
+                        <details class="faq-item">
+                              <summary>Can you mount a TV in outdoor patio or pool areas?</summary>
+                              <p>Yes, we install outdoor-rated mounts on stucco, brick, tile, or wood siding using weather-resistant hardware.</p>
+                        </details>
+
+                        <details class="faq-item">
+                              <summary>Do you mount soundbars and hide streaming box cables?</summary>
+                              <p>Yes! We can mount soundbars directly below the TV and conceal cables for Apple TVs, Roku devices, cable boxes, and gaming consoles.</p>
+                        </details>
+                  </div>
+            </div>
+
+            <!-- footer -->
+           <div id="details">
+                  <a class="btn_social" href="tel:+19285335549">(928)533-5549<i class="fas fa-mobile-alt"></i></a>
+                  <a class="btn_social" href="https://www.instagram.com/SouthernUtahTVMounting"><i class="fab fa-instagram"></i></a>
+                  <a class="btn_social" href="https://www.facebook.com/SouthernUtahTVMounting"><i class="fab fa-facebook"></i></a>
+            </div>   
+            </div>
+      </div>
+    <div id="footer">
+        <br><br> <a href="">Southern Utah TV Mounting</a>
+    </div>
+            <script src="{{ url_for('static', filename='script.js') }}" type="text/javascript"></script>
+
+</body>
+</html>
+
