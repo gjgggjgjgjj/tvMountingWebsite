@@ -3,62 +3,6 @@ from flask import Flask, render_template, request, redirect, url_for
 app = Flask(__name__)
 
 
-#---------------------------------------
-#tokens to send to jobber  comenting out rn because we probably don't have to make a whole backend
-"""
-JOBBER_ACCESS_TOKEN = "YOUR_JOBBER_OAUTH_ACCESS_TOKEN"
-JOBBER_GRAPHQL_URL = "https://api.getjobber.com/api/graphql"
-
-@app.route('/submit-request', methods=['POST'])
-def submit_request():
-    # Extract form data submitted by user
-    first_name = request.form.get('first_name')
-    last_name = request.form.get('last_name')
-    email = request.form.get('email')
-    details = request.form.get('details')
-
-    # Construct the Jobber API GraphQL Mutation
-    graphql_query = 
-    mutation CreateClientAndRequest($firstName: String!, $lastName: String!, $email: String!) {
-      clientCreate(input: {
-        firstName: $firstName,
-        lastName: $lastName,
-        emails: [{ address: $email, primary: true }]
-      }) {
-        client {
-          id
-        }
-        userErrors {
-          message
-        }
-      }
-    }
-    
-    headers = {
-        "Authorization": f"Bearer {JOBBER_ACCESS_TOKEN}",
-        "X-JOBBER-GRAPHQL-VERSION": "2025-04-16",
-        "Content-Type": "application/json"
-    }
-
-    payload = {
-        "query": graphql_query,
-        "variables": {
-            "firstName": first_name,
-            "lastName": last_name,
-            "email": email
-        }
-    }
-
-    response = requests.post(JOBBER_GRAPHQL_URL, json=payload, headers=headers)
-    
-    if response.status_code == 200:
-        return "Request submitted successfully to Jobber!"
-    else:
-        return f"Failed to submit to Jobber: {response.text}", 400
-
-
-    """
-#-------------------------------------------------------------------------------
 #base server site host app
 @app.route("/")
 def home():
