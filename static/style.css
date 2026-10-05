@@ -549,3 +549,172 @@ button:focus {
 
 /* ------------------------------------------------------------------------------------------------ */
 
+@media (max-width: 768px) {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    max-width: 100%;
+  }
+
+  body,
+  html {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  img,
+  video,
+  iframe {
+    max-width: 100%;
+  }
+
+  body,
+  p,
+  h1,
+  h2,
+  h3,
+  li,
+  summary {
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
+
+  .container,
+  #portfolio,
+  #content-container,
+  #quote-container,
+  #faq-section {
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  #header {
+    position: relative;
+    width: 100%;
+    padding: 1rem;
+  }
+
+  #header img {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: min(100%, 280px);
+    margin: 0 auto;
+  }
+
+  #title {
+    font-size: clamp(1.5rem, 7vw, 2rem);
+  }
+
+  #links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+    margin: 1rem 0;
+  }
+
+  #links a {
+    margin: 0 !important;
+  }
+
+  #middle {
+    width: 100%;
+    min-height: 65vh;
+    height: auto;
+    padding: 2rem 1rem;
+    background-attachment: scroll;
+    background-size: cover;
+  }
+
+  #tagline {
+    width: 100%;
+    max-width: 36rem;
+    font-size: clamp(1.5rem, 7vw, 2rem);
+  }
+
+  #portfolio {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .two-column {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1.5rem;
+    padding: 0;
+  }
+
+  .text-side,
+  .image-side {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .image-side img {
+    width: 100%;
+    height: auto;
+  }
+
+  #portfolio div h1,
+  #faq-section h1 {
+    font-size: 1.75rem;
+  }
+
+  li {
+    font-size: 1rem;
+  }
+
+  .services-section {
+    padding: 1rem 0;
+  }
+
+  .services-grid,
+  .checkbox-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .service-card,
+  .faq-item,
+  #quote-container {
+    min-width: 0;
+    padding: 1rem;
+  }
+
+  .quote-form .form-group-row {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  #contact form input,
+  #contact form textarea {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  #content-container {
+    height: auto;
+    min-height: 0;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  #header_padding {
+    padding-top: 1rem;
+  }
+
+  .btn_one,
+  .btn_two {
+    max-width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
