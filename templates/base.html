@@ -16,15 +16,13 @@
         <div id="spinner"></div>
     </div>
     <div id="header" class="animated slideInDown" style="animation-delay:1.8s;">
-      <a href="/">
-            <img id="title" src="{{ url_for('static', filename='assets/TVMountingLogo.png') }}"> 
+      <a class="header-logo" href="{{ url_for('home') }}">
+            <img id="title" src="{{ url_for('static', filename='assets/TVMountingLogo.png') }}">
       </a>
-      <br> <br>
       <div id="links">
-                              <!-- this was skill work and contact ori -->
-            <a class="btn_one" href="/#services">Services</a>
-            <a class="btn_one" href="/contact" style="margin:0px 60px;">Get A Quote</a>
-            <a class="btn_one" href="tel:+19285335549">(928)533-5549</a>
+            <button class="btn_one" type="button" onclick="window.location.href='{{ url_for('home', _anchor='services') }}'">Services</button>
+            <button class="btn_one" type="button" onclick="window.location.href='{{ url_for('contact') }}'">Get A Quote</button>
+            <button class="btn_one" type="button" onclick="window.location.href='tel:+19285335549'">(928)533-5549</button>
       </div>
     </div>
 
