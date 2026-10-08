@@ -12,18 +12,6 @@ $(document).ready(function(){
     });
 });
 
-var width = $(window).width(); 
-
-window.onscroll = function(){
-if ((width >= 900)){
-    if(document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-        $("#middle").css("background-size","150% auto");
-    }else{
-        $("#middle").css("background-size","100% auto");        
-    }
-}
-};
-
 setTimeout(function(){
     $("#loading").addClass("animated fadeOut");
     setTimeout(function(){
@@ -34,6 +22,63 @@ setTimeout(function(){
 
 // help services button work
 window.addEventListener('DOMContentLoaded', () => {
+    const carousel = document.getElementById('hero-slides');
+    if (carousel) {
+      const slides = Array.from(carousel.querySelectorAll('.hero-slide'));
+      const indicators = Array.from(document.querySelectorAll('[data-hero-slide]'));
+      const previousButton = document.querySelector('[data-hero-previous]');
+      const nextButton = document.querySelector('[data-hero-next]');
+      const controls = document.querySelector('.hero-controls');
+      const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+      let activeIndex = 0;
+      let timer;
+
+      const showSlide = (index) => {
+        activeIndex = (index + slides.length) % slides.length;
+        slides.forEach((slide, slideIndex) => {
+          const isActive = slideIndex === activeIndex;
+          slide.classList.toggle('is-active', isActive);
+          slide.setAttribute('aria-hidden', String(!isActive));
+          indicators[slideIndex].classList.toggle('is-active', isActive);
+          indicators[slideIndex].setAttribute('aria-pressed', String(isActive));
+        });
+      };
+
+      const stopAutoplay = () => window.clearInterval(timer);
+      const startAutoplay = () => {
+        stopAutoplay();
+        if (!reducedMotion.matches && !document.hidden) {
+          timer = window.setInterval(() => showSlide(activeIndex + 1), 6000);
+        }
+      };
+
+      previousButton.addEventListener('click', () => {
+        showSlide(activeIndex - 1);
+        startAutoplay();
+      });
+      nextButton.addEventListener('click', () => {
+        showSlide(activeIndex + 1);
+        startAutoplay();
+      });
+      indicators.forEach((indicator) => {
+        indicator.addEventListener('click', () => {
+          showSlide(Number(indicator.dataset.heroSlide));
+          startAutoplay();
+        });
+      });
+
+      controls.addEventListener('mouseenter', stopAutoplay);
+      controls.addEventListener('mouseleave', startAutoplay);
+      controls.addEventListener('focusin', stopAutoplay);
+      controls.addEventListener('focusout', (event) => {
+        if (!controls.contains(event.relatedTarget)) startAutoplay();
+      });
+      document.addEventListener('visibilitychange', startAutoplay);
+      reducedMotion.addEventListener('change', startAutoplay);
+      showSlide(activeIndex);
+      startAutoplay();
+    }
+
     if (window.location.hash === '#services') {
       const servicesSection = document.getElementById('services');
       if (servicesSection) {

@@ -4,11 +4,36 @@
 {% block content %}
 <center>
       <div id="middle">
+            <div class="hero-slides" id="hero-slides" aria-label="TV installation photos">
+                  <div class="hero-slide is-active" aria-hidden="false">
+                        <img src="{{ url_for('static', filename='assets/mainTvHanging.webp') }}" alt="TV mounted above a fireplace">
+                  </div>
+                  <div class="hero-slide" aria-hidden="true">
+                        <img src="{{ url_for('static', filename='assets/TVFireplace.webp') }}" alt="TV installed on a fireplace wall">
+                  </div>
+                  <div class="hero-slide" aria-hidden="true">
+                        <img src="{{ url_for('static', filename='assets/churchTVInstall.webp') }}" alt="Completed TV installation">
+                  </div>
+                  <div class="hero-slide" aria-hidden="true">
+                        <img src="{{ url_for('static', filename='assets/newTVInstallExample.jpg') }}" alt="TV installation example">
+                  </div>
+            </div>
+            <div class="hero-overlay" aria-hidden="true"></div>
             <div id="tagline" class="animated zoomIn" style="animation-delay:1.8s;">
                   Your TV, Perfectly Mounted. No Wires. No Mess. Guaranteed.<br>
-                  <button class="btn_one" onclick="window.location.href='{{ url_for('contact') }}'">
+                  <button class="btn_one" onclick="window.location.href='{{ ('contact') }}'">
                         Book an install</button>
                   <p id="install_price">Professional installs starting at just $150</p>
+            </div>
+            <div class="hero-controls" aria-label="Installation photo controls">
+                  <button class="hero-arrow" type="button" aria-label="Previous photo" data-hero-previous>&#10094;</button>
+                  <div class="hero-indicators">
+                        <button class="hero-indicator is-active" type="button" aria-label="Show photo 1" aria-pressed="true" data-hero-slide="0"></button>
+                        <button class="hero-indicator" type="button" aria-label="Show photo 2" aria-pressed="false" data-hero-slide="1"></button>
+                        <button class="hero-indicator" type="button" aria-label="Show photo 3" aria-pressed="false" data-hero-slide="2"></button>
+                        <button class="hero-indicator" type="button" aria-label="Show photo 4" aria-pressed="false" data-hero-slide="3"></button>
+                  </div>
+                  <button class="hero-arrow" type="button" aria-label="Next photo" data-hero-next>&#10095;</button>
             </div>
       </div>
 </center>
@@ -58,7 +83,7 @@
       <div id="work">
             <div class="two-column">
                   <div class="image-side">
-                        <img src="{{ url_for('static', filename='assets/mountingProcess.jpg') }}">
+                        <img src="{{ url_for('static', filename='assets/newTVInstallExample.jpg') }}">
                   </div>
 
                   <div class="text-side">
@@ -81,4 +106,3 @@
 
 
 {% endblock %}
-
