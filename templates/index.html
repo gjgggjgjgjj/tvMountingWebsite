@@ -2,32 +2,22 @@
 
 
 {% block content %}
-<center>
       <div id="middle">
-            <div class="hero-slides" id="hero-slides" aria-label="TV installation photos">
+            <div class="hero-slides" id="hero-slides" role="region" aria-roledescription="carousel" aria-label="TV installation photos">
                   <div class="hero-slide is-active" aria-hidden="false">
                         <img src="{{ url_for('static', filename='assets/mainTvHanging.webp') }}" alt="TV mounted above a fireplace">
                   </div>
                   <div class="hero-slide" aria-hidden="true">
-                        <img src="{{ url_for('static', filename='assets/TVFireplace.webp') }}" alt="TV installed on a fireplace wall">
+                        <img src="{{ url_for('static', filename='assets/Cayden_and_sam_drilling_page-0001.jpg') }}" alt="TV installed on a fireplace wall">
                   </div>
                   <div class="hero-slide" aria-hidden="true">
-                        <img src="{{ url_for('static', filename='assets/churchTVInstall.webp') }}" alt="Completed TV installation">
+                        <img src="{{ url_for('static', filename='assets/TVFireplace.jpg') }}" alt="Completed TV installation">
                   </div>
                   <div class="hero-slide" aria-hidden="true">
-                        <img src="{{ url_for('static', filename='assets/newTVInstallExample.jpg') }}" alt="TV installation example">
+                        <img src="{{ url_for('static', filename='assets/sam_chilling.png') }}" alt="TV installation example">
                   </div>
             </div>
-            <div class="hero-overlay" aria-hidden="true"></div>
-            <div id="tagline" class="animated zoomIn" style="animation-delay:1.8s;">
-                  Your TV, Perfectly Mounted. No Wires. No Mess. Guaranteed.
-The Perfect Placement Guarantee
-We mount it exactly how you want it, or it’s FREE<br>
-                  <button class="btn_one" onclick="window.location.href='{{ ('contact') }}'">
-                        Book an install</button>
-                  <p id="install_price">Professional installs starting at just $150</p>
-            </div>
-            <div class="hero-controls" aria-label="Installation photo controls">
+            <div class="hero-controls" role="group" aria-label="Installation photo controls">
                   <button class="hero-arrow" type="button" aria-label="Previous photo" data-hero-previous>&#10094;</button>
                   <div class="hero-indicators">
                         <button class="hero-indicator is-active" type="button" aria-label="Show photo 1" aria-pressed="true" data-hero-slide="0"></button>
@@ -38,9 +28,13 @@ We mount it exactly how you want it, or it’s FREE<br>
                   <button class="hero-arrow" type="button" aria-label="Next photo" data-hero-next>&#10095;</button>
             </div>
       </div>
-</center>
-
 <div id="portfolio">
+            <section class="hero-copy" aria-labelledby="hero-heading">
+                  <h1 id="hero-heading">Your TV, Perfectly Mounted. No Wires. Guaranteed.</h1>
+                  <p class="hero-promise">The Perfect Placement Guarantee: We mount it exactly how you want it, or it’s FREE.</p>
+                  <a href="{{ url_for('contact') }}" class="btn_one">Get Your Free Quote</a>
+                  <p id="install_price">Professional installs starting at just $150</p>
+            </section>
             <div id="skills">
             
                   <div class="two-column">
@@ -61,7 +55,7 @@ We mount it exactly how you want it, or it’s FREE<br>
       <div id="work">
             <div class="two-column">
                   <div class="image-side">
-                        <img src="{{ url_for('static', filename='assets/TVFireplace.webp') }}" alt="Professional Tv Mounting Example">
+                        <img src="{{ url_for('static', filename='assets/ladder_tv_mounted.jpg') }}" alt="Professional Tv Mounting Example">
                   </div>
 
                   <div class="text-side">
@@ -85,7 +79,7 @@ We mount it exactly how you want it, or it’s FREE<br>
       <div id="work">
             <div class="two-column">
                   <div class="image-side">
-                        <img src="{{ url_for('static', filename='assets/newTVInstallExample.jpg') }}">
+                        <img src="{{ url_for('static', filename='assets/Cayden_and_sam_drilling_page-0001.jpg') }}">
                   </div>
 
                   <div class="text-side">
@@ -101,9 +95,6 @@ We mount it exactly how you want it, or it’s FREE<br>
             </div>
       </div>
 
-</div>
-<div style="text-align: center; margin: 2rem 0;">
-      <a href="/contact" class="btn_one" id="service_quote" >Get Your Quote</a>
 </div>
 
 

@@ -48,7 +48,7 @@ window.addEventListener('DOMContentLoaded', () => {
       const startAutoplay = () => {
         stopAutoplay();
         if (!reducedMotion.matches && !document.hidden) {
-          timer = window.setInterval(() => showSlide(activeIndex + 1), 6000);
+          timer = window.setInterval(() => showSlide(activeIndex + 1), 4000);
         }
       };
 
