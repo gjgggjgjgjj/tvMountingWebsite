@@ -1,5 +1,5 @@
 #header_padding{
-      padding-top: 450px;
+      padding-top: 48px;
 }
 #install_price{
       font-size: 15px;
@@ -240,7 +240,7 @@ body,html {
     line-height: 1.7;
 }
 .privacy-policy-spacer {
-    height: 360px;
+    height: 48px;
 }
 .privacy-policy h1,
 .privacy-policy h2 {
@@ -763,7 +763,7 @@ button:focus {
   }
 
   .privacy-policy-spacer {
-    height: 0;
+    height: 24px;
   }
 
   #header img {

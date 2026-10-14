@@ -43,5 +43,10 @@ def privacy_policy():
     return render_template("privacy-policy.html")
 
 
+@app.route("/terms-of-service")
+def terms_of_service():
+    return render_template("terms-of-service.html")
+
+
 if __name__ == "__main__":
     app.run()
