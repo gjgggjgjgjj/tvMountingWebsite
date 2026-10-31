@@ -32,7 +32,36 @@ def services():
         return None
     return render_template("index.html")
 
+#we'll have a bunch of service routes here===============================
+@app.route("/standard_service")
+def standard_service():
+    return render_template("standard-service")
 
+@app.route("outdoor_service")
+def outdoor_service():
+    return render_template("outdoor-service.html")
+
+@app.route("masonry_fireplace_service")
+def masonry_fireplace_service():
+    return render_template("masonry-fireplace-service.html")
+
+@app.route("in_wall_concealment_service")
+def in_wall_concealment_service():
+    return render_template("in-wall-concealment-service.html")
+
+@app.route("sound_bar_service")
+def sound_bar_service():
+    return render_template("sound-bar-service.html")
+
+@app.route("alcove_service")
+def alcove_service():
+    return render_template("alcove-service.html")
+
+@app.route("moterized_fireplace_service")
+def moterized_fireplace_service():
+    return render_template("moterized-fireplace-service.html")
+
+#========================================================
 @app.route("/contact")
 def contact():
     return render_template("contact.html")
