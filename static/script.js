@@ -23,20 +23,23 @@ setTimeout(function(){
 // help services button work
 window.addEventListener('DOMContentLoaded', () => {
     const servicesDialog = document.getElementById('services-overlay');
-    const servicesButton = document.querySelector('[data-services-open]');
+    const servicesButtons = Array.from(document.querySelectorAll('[data-services-open]'));
     const servicesCloseButton = document.querySelector('[data-services-close]');
 
-    if (servicesDialog && servicesButton && servicesCloseButton) {
-      servicesButton.addEventListener('click', () => {
-        servicesDialog.showModal();
-        servicesButton.setAttribute('aria-expanded', 'true');
-        servicesCloseButton.focus();
+    if (servicesDialog && servicesButtons.length && servicesCloseButton) {
+      let activeServicesButton;
+
+      servicesButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+          activeServicesButton = button;
+          button.setAttribute('aria-expanded', 'true');
+          servicesDialog.showModal();
+          servicesCloseButton.focus();
+        });
       });
 
       const closeServicesDialog = () => {
         if (servicesDialog.open) servicesDialog.close();
-        servicesButton.setAttribute('aria-expanded', 'false');
-        servicesButton.focus();
       };
 
       servicesCloseButton.addEventListener('click', closeServicesDialog);
@@ -44,7 +47,8 @@ window.addEventListener('DOMContentLoaded', () => {
         if (event.target === servicesDialog) closeServicesDialog();
       });
       servicesDialog.addEventListener('close', () => {
-        servicesButton.setAttribute('aria-expanded', 'false');
+        servicesButtons.forEach((button) => button.setAttribute('aria-expanded', 'false'));
+        if (activeServicesButton) activeServicesButton.focus();
       });
     }
 
@@ -65,8 +69,11 @@ window.addEventListener('DOMContentLoaded', () => {
           const isActive = slideIndex === activeIndex;
           slide.classList.toggle('is-active', isActive);
           slide.setAttribute('aria-hidden', String(!isActive));
-          indicators[slideIndex].classList.toggle('is-active', isActive);
-          indicators[slideIndex].setAttribute('aria-pressed', String(isActive));
+          const indicator = indicators[slideIndex];
+          if (indicator) {
+            indicator.classList.toggle('is-active', isActive);
+            indicator.setAttribute('aria-pressed', String(isActive));
+          }
         });
       };
 

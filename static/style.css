@@ -400,6 +400,13 @@ body,html {
       gap: 40px;
       padding: 20;
 }
+.home-services-cta {
+      text-align:center;
+      padding:0 1rem 2rem;
+}
+.home-services-cta .btn_one {
+      margin:1rem;
+}
 .text-side {
       flex: 1;
 }
