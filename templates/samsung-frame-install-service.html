@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block content %}
+<main id="portfolio">
+      <section class="hero-copy" aria-labelledby="service-heading">
+            <h1 id="service-heading">Samsung Frame TV Installation</h1>
+            <p class="hero-promise">Enjoy your Samsung Frame TV as both a beautiful display and a place to watch your favorite shows.</p>
+            <p>We install Samsung Frame TVs throughout Southern Utah, with careful attention to placement, the Slim Fit Wall Mount, and a clean finished look.</p>
+            <a href="{{ url_for('contact') }}" class="btn_one">Plan Your Frame TV Installation</a>
+      </section>
+
+      <section class="two-column">
+            <div class="image-side">
+                  <img src="{{ url_for('static', filename='assets/mainTvHanging.webp') }}" alt="Example of a professionally wall-mounted TV">
+            </div>
+            <div class="text-side">
+                  <h2>A clean, gallery-inspired installation</h2>
+                  <p>We’ll help plan a location and installation approach suited to your room, wall type, and preferred viewing height.</p>
+            </div>
+      </section>
+
+      <section class="services-grid" aria-label="Samsung Frame TV installation considerations">
+            <article class="service-card">
+                  <h3>Find the right placement</h3>
+                  <p>We consider seating, viewing height, screen visibility, and nearby light when discussing where your Frame TV should go.</p>
+            </article>
+            <article class="service-card">
+                  <h3>Mount for a close-to-wall fit</h3>
+                  <p>The wall surface and included Slim Fit Wall Mount help determine the installation approach. Tell us which Frame TV you have and what type of wall it will go on.</p>
+            </article>
+            <article class="service-card">
+                  <h3>Plan the One Connect setup</h3>
+                  <p>We’ll account for the One Connect box, power, and cable routing when planning a neat, practical installation for your room.</p>
+            </article>
+      </section>
+
+      <section class="two-column">
+            <div class="text-side">
+                  <h2>Designed around your space</h2>
+                  <p>Every room is different. Share a few details about your wall, the Frame TV model, where you’d like it installed, and where you’ll sit to watch.</p>
+            </div>
+            <div class="text-side">
+                  <h2>Get a clear next step</h2>
+                  <p>Send us your location and a description or photo of the wall. We’ll discuss placement, the One Connect box and cable routing, and a quote before work begins.</p>
+                  <a href="{{ url_for('contact') }}" class="btn_one">Request a Samsung Frame TV Quote</a>
+            </div>
+      </section>
+</main>
+{% endblock %}

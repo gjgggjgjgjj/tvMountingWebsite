@@ -61,6 +61,9 @@ def alcove_service():
 def moterized_fireplace_service():
     return render_template("moterized-mantel-service.html")
 
+@app.route("/samsung_frame_install_service")
+def samsung_frame_install_service():
+    return render_template("samsung-frame-install-service.html")
 #========================================================
 @app.route("/contact")
 def contact():
@@ -78,4 +81,4 @@ def terms_of_service():
 
 
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True)
