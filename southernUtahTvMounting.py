@@ -49,4 +49,4 @@ def terms_of_service():
 
 
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True)
