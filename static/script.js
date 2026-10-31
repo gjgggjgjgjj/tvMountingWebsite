@@ -22,6 +22,32 @@ setTimeout(function(){
 
 // help services button work
 window.addEventListener('DOMContentLoaded', () => {
+    const servicesDialog = document.getElementById('services-overlay');
+    const servicesButton = document.querySelector('[data-services-open]');
+    const servicesCloseButton = document.querySelector('[data-services-close]');
+
+    if (servicesDialog && servicesButton && servicesCloseButton) {
+      servicesButton.addEventListener('click', () => {
+        servicesDialog.showModal();
+        servicesButton.setAttribute('aria-expanded', 'true');
+        servicesCloseButton.focus();
+      });
+
+      const closeServicesDialog = () => {
+        if (servicesDialog.open) servicesDialog.close();
+        servicesButton.setAttribute('aria-expanded', 'false');
+        servicesButton.focus();
+      };
+
+      servicesCloseButton.addEventListener('click', closeServicesDialog);
+      servicesDialog.addEventListener('click', (event) => {
+        if (event.target === servicesDialog) closeServicesDialog();
+      });
+      servicesDialog.addEventListener('close', () => {
+        servicesButton.setAttribute('aria-expanded', 'false');
+      });
+    }
+
     const carousel = document.getElementById('hero-slides');
     if (carousel) {
       const slides = Array.from(carousel.querySelectorAll('.hero-slide'));

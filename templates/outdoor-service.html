@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block content %}
+<main id="portfolio">
+      <section class="hero-copy" aria-labelledby="service-heading">
+            <h1 id="service-heading">Outdoor TV Mounting</h1>
+            <p class="hero-promise">Bring game day and movie night to the patio with a setup planned for your outdoor space.</p>
+            <p>We install TVs on suitable exterior surfaces throughout Southern Utah, helping you create a practical viewing area for a covered patio, backyard, or outdoor kitchen.</p>
+            <a href="{{ url_for('contact') }}" class="btn_one">Plan Your Outdoor Setup</a>
+      </section>
+
+      <section class="services-grid" aria-label="Outdoor installation considerations">
+            <article class="service-card">
+                  <h3>Choose the right location</h3>
+                  <p>We consider seating, screen visibility, glare, and exposure when discussing where the TV should go.</p>
+            </article>
+            <article class="service-card">
+                  <h3>Hardware for the setting</h3>
+                  <p>Exterior surfaces and weather exposure matter. Tell us about the wall and whether you already have an outdoor-rated TV and mount.</p>
+            </article>
+            <article class="service-card">
+                  <h3>Plan the complete setup</h3>
+                  <p>Power, cable routing, and protection from the elements all affect the finished installation. We’ll help identify what your space needs.</p>
+            </article>
+      </section>
+
+      <section class="two-column">
+            <div class="text-side">
+                  <h2>Designed around your patio</h2>
+                  <p>Every outdoor space is different. Share a few details about the mounting surface, how exposed it is to sun and weather, and where you’ll sit to watch.</p>
+            </div>
+            <div class="text-side">
+                  <h2>Get a clear next step</h2>
+                  <p>Send us your location and a description or photo of the area. We’ll discuss compatibility, placement, and a quote before work begins.</p>
+                  <a href="{{ url_for('contact') }}" class="btn_one">Request an Outdoor TV Quote</a>
+            </div>
+      </section>
+</main>
+{% endblock %}

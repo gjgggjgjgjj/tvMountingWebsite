@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block content %}
+<main id="portfolio">
+      <section class="hero-copy" aria-labelledby="service-heading">
+            <h1 id="service-heading">Motorized Mantel-Mount Installation</h1>
+            <p class="hero-promise">Enjoy a comfortable viewing angle above the fireplace with an adjustable motorized mount.</p>
+            <p>A motorized mantel mount can lower a fireplace-mounted TV for viewing and return it above the mantel when you’re done. We’ll help assess the wall, fireplace clearance, TV, and mount compatibility before installation.</p>
+            <a href="{{ url_for('contact') }}" class="btn_one">Ask About a Motorized Mount</a>
+      </section>
+
+      <section class="services-grid" aria-label="Motorized mount installation planning">
+            <article class="service-card">
+                  <h3>Check fit and clearance</h3>
+                  <p>TV size, mantel depth, fireplace heat, and the mount’s travel path all need to be considered for your space.</p>
+            </article>
+            <article class="service-card">
+                  <h3>Confirm compatibility</h3>
+                  <p>Share the mount model, TV dimensions, and wall material so we can discuss the installation requirements.</p>
+            </article>
+            <article class="service-card">
+                  <h3>Plan the full experience</h3>
+                  <p>We’ll talk through viewing position, nearby power, and cable routing as part of planning a clean, usable setup.</p>
+            </article>
+      </section>
+
+      <section class="two-column">
+            <div class="text-side">
+                  <h2>Comfortable viewing, at the touch of a button</h2>
+                  <p>Lowering the screen can help bring a high fireplace installation closer to eye level while you watch. The right setup depends on your room and the mount’s specifications.</p>
+            </div>
+            <div class="text-side">
+                  <h2>Start with a compatibility check</h2>
+                  <p>Send us a photo of the fireplace, TV size, and motorized mount details. We’ll discuss whether the setup is a good fit and provide a quote.</p>
+                  <a href="{{ url_for('contact') }}" class="btn_one">Request Your Installation Quote</a>
+            </div>
+      </section>
+</main>
+{% endblock %}

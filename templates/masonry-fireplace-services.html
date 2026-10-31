@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block content %}
+<main id="portfolio">
+      <section class="hero-copy" aria-labelledby="service-heading">
+            <h1 id="service-heading">Masonry &amp; Fireplace TV Mounting</h1>
+            <p class="hero-promise">Make your fireplace wall the focal point with a TV mounted for a clean, considered finish.</p>
+            <p>Brick, stone, tile, and other masonry surfaces call for the right preparation and fastening method. We assess the surface and mounting location before planning an installation.</p>
+            <a href="{{ url_for('contact') }}" class="btn_one">Get a Fireplace Mounting Quote</a>
+      </section>
+
+      <section class="services-grid" aria-label="Fireplace mounting details">
+            <article class="service-card">
+                  <h3>Surface-specific planning</h3>
+                  <p>Describe the material and texture of your fireplace so we can consider the appropriate tools, mount, and hardware.</p>
+            </article>
+            <article class="service-card">
+                  <h3>Comfortable viewing position</h3>
+                  <p>We’ll talk through your seating and preferred screen height, including whether an adjustable mount may suit the space.</p>
+            </article>
+            <article class="service-card">
+                  <h3>A polished arrangement</h3>
+                  <p>Ask about wire concealment and soundbar installation to coordinate the TV with the rest of your media setup.</p>
+            </article>
+      </section>
+
+      <section class="two-column">
+            <div class="text-side">
+                  <h2>Get the details right before installation</h2>
+                  <p>Fireplace walls can vary in depth, finish, and structure. Share a photo of the wall, the TV size, and the mount you plan to use so we can discuss the best next step.</p>
+            </div>
+            <div class="text-side">
+                  <h2>Let’s plan your fireplace setup</h2>
+                  <p>Serving St. George and surrounding Southern Utah communities. Request a quote and tell us what your fireplace is made of.</p>
+                  <a href="{{ url_for('contact') }}" class="btn_one">Request Your Quote</a>
+            </div>
+      </section>
+</main>
+{% endblock %}

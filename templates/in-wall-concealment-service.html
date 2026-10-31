@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block content %}
+<main id="portfolio">
+      <section class="hero-copy" aria-labelledby="service-heading">
+            <h1 id="service-heading">In-Wall TV Wire Concealment</h1>
+            <p class="hero-promise">Enjoy the screen, not a tangle of cords hanging below it.</p>
+            <p>In-wall wire concealment can give a mounted TV a cleaner, more finished appearance. We’ll discuss your wall construction, connected devices, and the appropriate cable-routing options for your setup.</p>
+            <a href="{{ url_for('contact') }}" class="btn_one">Ask About Wire Concealment</a>
+      </section>
+
+      <section class="services-grid" aria-label="Wire concealment options">
+            <article class="service-card">
+                  <h3>Plan around your devices</h3>
+                  <p>Tell us what you connect—streaming devices, a game console, or a soundbar—so the cable plan fits the way you watch.</p>
+            </article>
+            <article class="service-card">
+                  <h3>Consider the wall</h3>
+                  <p>Stud locations, insulation, and existing wiring affect what is possible. We’ll review the wall and talk through a suitable approach.</p>
+            </article>
+            <article class="service-card">
+                  <h3>Explore a neat alternative</h3>
+                  <p>If an in-wall route is not a fit for your wall, ask about a clean surface-mounted raceway option.</p>
+            </article>
+      </section>
+
+      <section class="two-column">
+            <div class="text-side">
+                  <h2>A cleaner look, planned responsibly</h2>
+                  <p>Electrical and low-voltage wiring have different requirements. We’ll discuss appropriate cable-routing options for your installation and identify when additional electrical work may be needed.</p>
+            </div>
+            <div class="text-side">
+                  <h2>Tell us about your wall</h2>
+                  <p>Include your TV location, wall type, and connected devices when requesting a quote. We’ll help you choose the next step for a tidy setup.</p>
+                  <a href="{{ url_for('contact') }}" class="btn_one">Get a Wire Concealment Quote</a>
+            </div>
+      </section>
+</main>
+{% endblock %}

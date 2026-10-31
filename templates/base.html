@@ -40,11 +40,34 @@
             <img id="title" src="{{ url_for('static', filename='assets/TVMountingLogo.png') }}">
       </a>
       <div id="links">
-            <button class="btn_one" type="button" onclick="window.location.href='{{ url_for('home', _anchor='services') }}'">Services</button>
+            <button class="btn_one" type="button" aria-controls="services-overlay" aria-expanded="false" data-services-open>Services</button>
             <button class="btn_one" type="button" onclick="window.location.href='{{ url_for('contact') }}'">Get A Quote</button>
             <button class="btn_one" type="button" onclick="window.location.href='tel:+19285335549'">(928)533-5549</button>
       </div>
     </div>
+
+    <dialog class="services-overlay" id="services-overlay" aria-labelledby="services-overlay-title">
+          <div class="services-overlay-panel">
+                <div class="services-overlay-heading">
+                      <div>
+                            <p class="services-overlay-eyebrow">Southern Utah TV Mounting</p>
+                            <h2 id="services-overlay-title">How can we help?</h2>
+                            <p>Explore professional installation options for your space.</p>
+                      </div>
+                      <button class="services-overlay-close" type="button" aria-label="Close services menu" data-services-close>&times;</button>
+                </div>
+                <nav class="services-overlay-list" aria-label="Our services">
+                      <a href="{{ url_for('standard_service') }}">Standard TV Mounting <span aria-hidden="true">&rarr;</span></a>
+                      <a href="{{ url_for('outdoor_service') }}">Outdoor TV Mounting <span aria-hidden="true">&rarr;</span></a>
+                      <a href="{{ url_for('masonry_fireplace_service') }}">Masonry &amp; Fireplace Mounting <span aria-hidden="true">&rarr;</span></a>
+                      <a href="{{ url_for('in_wall_concealment_service') }}">In-Wall Wire Concealment <span aria-hidden="true">&rarr;</span></a>
+                      <a href="{{ url_for('sound_bar_service') }}">Soundbar Installation <span aria-hidden="true">&rarr;</span></a>
+                      <a href="{{ url_for('alcove_service') }}">Custom Alcove Solutions <span aria-hidden="true">&rarr;</span></a>
+                      <a href="{{ url_for('moterized_fireplace_service') }}">Motorized Mantel-Mount Installation <span aria-hidden="true">&rarr;</span></a>
+                </nav>
+                <a class="services-overlay-quote" href="{{ url_for('contact') }}">Not sure what you need? Get a quote</a>
+          </div>
+    </dialog>
 
       
             <!-- page content -->

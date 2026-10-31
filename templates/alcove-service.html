@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block content %}
+<main id="portfolio">
+      <section class="hero-copy" aria-labelledby="service-heading">
+            <h1 id="service-heading">Custom TV Alcove Solutions</h1>
+            <p class="hero-promise">Make the most of a built-in niche with a TV installation planned around its dimensions.</p>
+            <p>Alcoves and recessed spaces can create a distinctive media wall, but the opening, depth, and surrounding finish all matter. We’ll help you consider screen fit, placement, and mounting options for your space.</p>
+            <a href="{{ url_for('contact') }}" class="btn_one">Discuss Your Alcove Project</a>
+      </section>
+
+      <section class="services-grid" aria-label="Alcove installation planning">
+            <article class="service-card">
+                  <h3>Check the fit</h3>
+                  <p>Share the opening’s width, height, and depth along with your TV dimensions so we can discuss clearance and placement.</p>
+            </article>
+            <article class="service-card">
+                  <h3>Work with the existing finish</h3>
+                  <p>Trim, stone, cabinetry, and wall depth can influence the installation. Photos help us understand the details before quoting.</p>
+            </article>
+            <article class="service-card">
+                  <h3>Plan a complete media area</h3>
+                  <p>Ask about coordinating the TV with a soundbar, connected devices, and a tidy cable-routing solution.</p>
+            </article>
+      </section>
+
+      <section class="two-column">
+            <div class="text-side">
+                  <h2>Every built-in space is different</h2>
+                  <p>Some alcoves offer room for an adjustable mount; others are best suited to a fixed position. We’ll review the opening and your viewing needs before recommending a direction.</p>
+            </div>
+            <div class="text-side">
+                  <h2>Start with a few measurements</h2>
+                  <p>Send the alcove dimensions, TV size, and a photo of the area. We’ll talk through your options and provide a quote for the planned work.</p>
+                  <a href="{{ url_for('contact') }}" class="btn_one">Request an Alcove Quote</a>
+            </div>
+      </section>
+</main>
+{% endblock %}

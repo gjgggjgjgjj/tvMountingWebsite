@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block content %}
+<main id="portfolio">
+      <section class="hero-copy" aria-labelledby="service-heading">
+            <h1 id="service-heading">Standard TV Mounting in Southern Utah</h1>
+            <p class="hero-promise">Get a clean, secure viewing setup with your TV positioned just where you want it.</p>
+            <p>From a cozy living room to a media room, we help homeowners around St. George, Washington, Ivins, Santa Clara, and Hurricane enjoy a more comfortable, uncluttered setup.</p>
+            <a href="{{ url_for('contact') }}" class="btn_one">Get a TV Mounting Quote</a>
+      </section>
+
+      <section class="services-grid" aria-label="What to expect">
+            <article class="service-card">
+                  <h3>A careful fit</h3>
+                  <p>We talk through screen height, seating position, and the wall before choosing a mounting location.</p>
+            </article>
+            <article class="service-card">
+                  <h3>Secure installation</h3>
+                  <p>Your mount is installed using hardware suited to the wall and mounting surface, then checked for level and stability.</p>
+            </article>
+            <article class="service-card">
+                  <h3>A tidy finish</h3>
+                  <p>Want a cleaner look? Ask about in-wall wire concealment or a neat surface raceway when you request your quote.</p>
+            </article>
+      </section>
+
+      <section class="two-column">
+            <div class="text-side">
+                  <h2>Make your room work better</h2>
+                  <p>A wall-mounted TV can free up furniture space and create a more intentional focal point. Tell us about your room, TV, and preferred viewing position, and we’ll help plan the installation.</p>
+                  <p>Have a full-motion mount, a large screen, or an unusual wall? Include those details in your quote request so we can recommend the right approach.</p>
+            </div>
+            <div class="text-side">
+                  <h2>Ready for a cleaner setup?</h2>
+                  <p>Share your location and installation details. We’ll follow up to discuss the wall, mount, and any add-ons you have in mind.</p>
+                  <a href="{{ url_for('contact') }}" class="btn_one">Request Your Quote</a>
+            </div>
+      </section>
+</main>
+{% endblock %}

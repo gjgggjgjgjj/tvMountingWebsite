@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block content %}
+<main id="portfolio">
+      <section class="hero-copy" aria-labelledby="service-heading">
+            <h1 id="service-heading">Soundbar Installation</h1>
+            <p class="hero-promise">Bring your TV and sound together in a clean, coordinated setup.</p>
+            <p>A soundbar mounted below your TV can free up shelf space and keep the viewing area feeling organized. We can help position and mount a compatible soundbar as part of your media setup.</p>
+            <a href="{{ url_for('contact') }}" class="btn_one">Get a Soundbar Installation Quote</a>
+      </section>
+
+      <section class="services-grid" aria-label="Soundbar installation benefits">
+            <article class="service-card">
+                  <h3>Coordinated placement</h3>
+                  <p>We consider your TV position, soundbar dimensions, and the mount’s compatibility for a balanced arrangement.</p>
+            </article>
+            <article class="service-card">
+                  <h3>Less shelf clutter</h3>
+                  <p>Mounting the soundbar keeps it off the console and helps make the space around your screen feel more intentional.</p>
+            </article>
+            <article class="service-card">
+                  <h3>One joined-up setup</h3>
+                  <p>Pair soundbar installation with TV mounting or ask about cable concealment to finish the whole viewing area.</p>
+            </article>
+      </section>
+
+      <section class="two-column">
+            <div class="text-side">
+                  <h2>Make your setup fit your room</h2>
+                  <p>Soundbar models and mounting systems differ. Have the model information available, or share a photo of your TV and soundbar when you get in touch.</p>
+            </div>
+            <div class="text-side">
+                  <h2>Get everything in the right place</h2>
+                  <p>Serving homes and businesses around Southern Utah. Tell us whether you’re adding a soundbar to a new TV install or an existing setup.</p>
+                  <a href="{{ url_for('contact') }}" class="btn_one">Request Your Quote</a>
+            </div>
+      </section>
+</main>
+{% endblock %}
