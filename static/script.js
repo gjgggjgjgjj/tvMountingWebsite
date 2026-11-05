@@ -59,9 +59,16 @@ window.addEventListener('DOMContentLoaded', () => {
       const previousButton = document.querySelector('[data-hero-previous]');
       const nextButton = document.querySelector('[data-hero-next]');
       const controls = document.querySelector('.hero-controls');
+      const currentLabel = document.querySelector('[data-hero-current]');
+      const totalLabel = document.querySelector('[data-hero-total]');
       const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+      const interval = 4000;
+      const pad = (n) => String(n).padStart(2, '0');
       let activeIndex = 0;
       let timer;
+
+      controls.style.setProperty('--hero-interval', interval + 'ms');
+      if (totalLabel) totalLabel.textContent = pad(slides.length);
 
       const showSlide = (index) => {
         activeIndex = (index + slides.length) % slides.length;
@@ -75,13 +82,28 @@ window.addEventListener('DOMContentLoaded', () => {
             indicator.setAttribute('aria-pressed', String(isActive));
           }
         });
+        if (currentLabel) currentLabel.textContent = pad(activeIndex + 1);
       };
 
-      const stopAutoplay = () => window.clearInterval(timer);
+      // restart the progress-bar fill on the active indicator
+      const restartProgress = () => {
+        controls.classList.remove('is-playing');
+        void controls.offsetWidth;
+        controls.classList.add('is-playing');
+      };
+
+      const stopAutoplay = () => {
+        window.clearInterval(timer);
+        controls.classList.remove('is-playing');
+      };
       const startAutoplay = () => {
         stopAutoplay();
         if (!reducedMotion.matches && !document.hidden) {
-          timer = window.setInterval(() => showSlide(activeIndex + 1), 4000);
+          restartProgress();
+          timer = window.setInterval(() => {
+            showSlide(activeIndex + 1);
+            restartProgress();
+          }, interval);
         }
       };
 

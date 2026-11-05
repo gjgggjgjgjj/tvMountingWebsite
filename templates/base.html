@@ -20,7 +20,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Southern Utah TV Mounting | Expert TV Mounting Solutions - Book Now</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Comfortaa:700" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
       <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
@@ -31,12 +33,12 @@
     </div>
     <div id="header" class="animated slideInDown" style="animation-delay:1.8s;">
       <a class="header-logo" href="{{ url_for('home') }}">
-            <img id="title" src="{{ url_for('static', filename='assets/TVMountingLogo.png') }}">
+            <img id="title" src="{{ url_for('static', filename='assets/TVMountingLogo.png') }}" alt="Southern Utah TV Mounting">
       </a>
       <div id="links">
             <button class="btn_one" type="button" aria-controls="services-overlay" aria-expanded="false" data-services-open>Services</button>
-            <button class="btn_one" type="button" onclick="window.location.href='{{ url_for('contact') }}'">Get A Quote</button>
-            <button class="btn_one" type="button" onclick="window.location.href='tel:+19285335549'">(928)533-5549</button>
+            <a class="btn_one btn-primary" href="{{ url_for('contact') }}">Get A Quote</a>
+            <a class="btn_one" href="tel:+19285335549"><i class="fas fa-phone-alt" aria-hidden="true"></i>(928) 533-5549</a>
       </div>
     </div>
 
@@ -156,23 +158,20 @@
             </div>
 
             <!-- footer -->
-           <div id="details">
-                  <a class="btn_social" href="tel:+19285335549">(928)533-5549<i class="fas fa-mobile-alt"></i></a>
-                  <a class="btn_social" href="https://www.instagram.com/SouthernUtahTVMounting"><i class="fab fa-instagram"></i></a>
-                  <a class="btn_social" href="https://www.facebook.com/SouthernUtahTVMounting"><i class="fab fa-facebook"></i></a>
-            </div>   
+            <div id="details">
+                  <a class="btn_social" href="tel:+19285335549"><i class="fas fa-mobile-alt" aria-hidden="true"></i>(928) 533-5549</a>
+                  <a class="btn_social" href="https://www.instagram.com/SouthernUtahTVMounting" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                  <a class="btn_social" href="https://www.facebook.com/SouthernUtahTVMounting" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
             </div>
-      </div>
 
-
-
-    <div id="footer">
-        <br><br>
-        <a href="">Southern Utah TV Mounting</a>
-        <br>
-        <a class="footer-policy-link" href="{{ url_for('privacy_policy') }}" style="font-size: small;">Privacy Policy</a>
-        <a class="footer-policy-link" href="{{ url_for('terms_of_service') }}" style="font-size: small;">Terms Of Service</a>
-    </div>
+    <footer id="footer">
+        <a class="footer-brand" href="{{ url_for('home') }}">Southern Utah TV Mounting</a>
+        <div class="footer-links">
+            <a class="footer-policy-link" href="{{ url_for('privacy_policy') }}">Privacy Policy</a>
+            <a class="footer-policy-link" href="{{ url_for('terms_of_service') }}">Terms Of Service</a>
+        </div>
+        <p class="footer-copy">Serving St. George, Washington, Ivins, Santa Clara, Hurricane &amp; surrounding areas</p>
+    </footer>
             <script src="{{ url_for('static', filename='script.js') }}" type="text/javascript"></script>
 
 </body>

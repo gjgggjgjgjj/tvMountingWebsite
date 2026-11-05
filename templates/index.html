@@ -28,7 +28,8 @@
                   </div>
             </div>
             <div class="hero-controls" role="group" aria-label="Installation photo controls">
-                  <button class="hero-arrow" type="button" aria-label="Previous photo" data-hero-previous>&#10094;</button>
+                  <button class="hero-arrow" type="button" aria-label="Previous photo" data-hero-previous><i class="fas fa-chevron-left" aria-hidden="true"></i></button>
+                  <span class="hero-counter" aria-hidden="true"><span data-hero-current>01</span></span>
                   <div class="hero-indicators">
                         <button class="hero-indicator is-active" type="button" aria-label="Show photo 1" aria-pressed="true" data-hero-slide="0"></button>
                         <button class="hero-indicator" type="button" aria-label="Show photo 2" aria-pressed="false" data-hero-slide="1"></button>
@@ -38,7 +39,8 @@
                         <button class="hero-indicator" type="button" aria-label="Show photo 6" aria-pressed="false" data-hero-slide="5"></button>
                         <button class="hero-indicator" type="button" aria-label="Show photo 7" aria-pressed="false" data-hero-slide="6"></button>
                   </div>
-                  <button class="hero-arrow" type="button" aria-label="Next photo" data-hero-next>&#10095;</button>
+                  <span class="hero-counter" aria-hidden="true" data-hero-total>07</span>
+                  <button class="hero-arrow" type="button" aria-label="Next photo" data-hero-next><i class="fas fa-chevron-right" aria-hidden="true"></i></button>
             </div>
       </div>
 <div id="portfolio">
@@ -49,7 +51,6 @@
                   <p id="install_price">Professional installs starting at just $150</p>
             </section>
             <div id="skills">
-            
                   <div class="two-column">
                         <div class="text-side">
                               <h1>Professional TV Installs Done Right — The First Time</h1>
@@ -73,37 +74,44 @@
 
                   <div class="text-side">
                         <h1>What We Do</h1>
-                        <p>
-                              We specialize in professional wall-mounted TV solutions designed to make your space look better and function better.
-                              <br>
-                              <ul>
-                                    <li>TV Wall Mounting</li>
-                                    <li>Soundbar Installation</li>
-                                    <li>Wire Concealment (in-Wall or Raceway)</li>
-                                    <li>TV Dismount & Remount</li>
-                                    <li>Fireplace TV Mounting</li>
-                              </ul>
-                        </p>
+                        <p>We specialize in professional wall-mounted TV solutions designed to make your space look better and function better.</p>
+                        <ul class="check-list">
+                              <li>TV Wall Mounting</li>
+                              <li>Soundbar Installation</li>
+                              <li>Wire Concealment (in-Wall or Raceway)</li>
+                              <li>TV Dismount &amp; Remount</li>
+                              <li>Fireplace TV Mounting</li>
+                        </ul>
                   </div>
             </div>
       </div>
-      <a> </a>
 
-      <div id="work">
+      <div id="why-us">
             <div class="two-column">
                   <div class="image-side">
-                        <img src="{{ url_for('static', filename='assets/Cayden_and_sam_drilling_page-0001.jpg') }}">
+                        <img src="{{ url_for('static', filename='assets/Cayden_and_sam_drilling_page-0001.jpg') }}" alt="Our installers drilling a wall mount">
                   </div>
 
                   <div class="text-side">
                         <h1>WHY CHOOSE US?</h1>
-                              <p>Precision Installs</p>
-                              <p>Every TV is mounted into studs, level and safety-checked.</p>
-                              <p>Clean & Respectful</p>
-                              <p>We protect your home and leave the area spotless.</p>
-                              <p>Honest Pricing</p>
-                              <p>No surprise fees. You know the price before we start.</p>
-                              <p>Local Southern Utah Business</p>
+                        <div class="reasons">
+                              <div class="reason">
+                                    <h3>Precision Installs</h3>
+                                    <p>Every TV is mounted into studs, level and safety-checked.</p>
+                              </div>
+                              <div class="reason">
+                                    <h3>Clean &amp; Respectful</h3>
+                                    <p>We protect your home and leave the area spotless.</p>
+                              </div>
+                              <div class="reason">
+                                    <h3>Honest Pricing</h3>
+                                    <p>No surprise fees. You know the price before we start.</p>
+                              </div>
+                              <div class="reason">
+                                    <h3>Local Business</h3>
+                                    <p>Proudly owned and operated in Southern Utah.</p>
+                              </div>
+                        </div>
                   </div>
             </div>
       </div>
